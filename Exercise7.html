@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exam7</title>
+	<link rel="stylesheet" type="text/css" href="JQ/css/bootstrap.min.css">
+	<script type="text/javascript" src="JQ/js/jquery.min.js"></script>
+	<script type="text/javascript" src="JQ/js/bootstrap.bundle.min.js"></script>
+
+
+	<script type="text/javascript">
+		let date = 1;
+    for (let i = 0; i < 6; i++) {
+        // creates a table row
+        let row = document.createElement("tr");
+
+        //creating individual cells, filing them up with data.
+        for (let j = 0; j < 7; j++) {
+            if (i === 0 && j < firstDay) {
+                cell = document.createElement("td");
+                cellText = document.createTextNode("");
+                cell.appendChild(cellText);
+                row.appendChild(cell);
+            }
+            else if (date > daysInMonth(month, year)) {
+                break;
+            }
+
+            else {
+                cell = document.createElement("td");
+                cellText = document.createTextNode(date);
+                cell.appendChild(cellText);
+                row.appendChild(cell);
+                date++;
+            }
+
+
+        }
+
+        tbl.appendChild(row); // appending each row into calendar body.
+    }
+
+
+	</script>
+
+	<body>
+
+
+		
+
+
+
+
+
+	</body>
+
+</head>
+</html>
